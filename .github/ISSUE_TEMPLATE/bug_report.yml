@@ -1,0 +1,84 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data only.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Flow Lens is an experimental synthetic/manual preview.
+
+        **Do not upload real employees, customers, orders, addresses, voices, private videos, credentials, or confidential workflow material.** Use the programmatic fixture or the committed generated WebM.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed private data, local absolute paths, credentials, and confidential media from this report.
+          required: true
+        - label: My reproduction uses only programmatic or generated synthetic fixtures.
+          required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA
+      placeholder: abc1234
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Node.js, operating system, browser, and viewport.
+      placeholder: Node 22.x, Ubuntu/macOS, Chromium, 1440x900
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - First-run and experience flow
+        - Source, timeline, or regions
+        - Observation review and revisions
+        - Coverage, metrics, or comparison
+        - Local-media lifecycle
+        - Accessibility or responsive layout
+        - Build, tests, or documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Synthetic reproduction steps
+      description: Provide the smallest deterministic sequence and scenario ID.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_boundary
+    attributes:
+      label: What this report does not prove
+      description: State any claim or real-world conclusion that must not be inferred from the reproduction.
+    validations:
+      required: true

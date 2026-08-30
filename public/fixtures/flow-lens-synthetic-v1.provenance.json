@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "fixture:d4d20aa5",
+  "seed": "flow-lens-portfolio-v1",
+  "title": "固定工位同一 SKU 合成打包演示",
+  "provenance": "synthetic",
+  "sourceFiles": [
+    "src/fixtures/syntheticWorkbench.ts",
+    "src/fixtures/syntheticSource.ts",
+    "artifacts/fixtures/synthetic-local-valid.webm"
+  ],
+  "generatedMedia": {
+    "path": "artifacts/fixtures/synthetic-local-valid.webm",
+    "sha256": "3608868e64124b933657459805d3a9fb5293d2576305af2db2db889d7dab1b06",
+    "recipe": "ffmpeg lavfi testsrc 320x180 at 10 fps, one second, VP9, no audio",
+    "purpose": "LocalMediaSession decode and lifecycle E2E only"
+  },
+  "containsRealPeople": false,
+  "containsPrivateData": false,
+  "containsRealBusinessProcess": false,
+  "generatedAtRuntime": true,
+  "networkRequired": false,
+  "modelRequired": false,
+  "license": "MIT",
+  "redistribution": "MIT",
+  "licenseFile": "LICENSE",
+  "assetNotice": "ASSET_LICENSE.md",
+  "evidenceCeiling": "Prototype and synthetic-fixture behavior only. Not real workflow, user value, camera reliability or production evidence."
+}

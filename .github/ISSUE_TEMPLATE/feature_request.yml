@@ -1,0 +1,60 @@
+name: Feature request
+description: Propose a scoped improvement to the experimental local preview.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep proposals within the current manual, synthetic, local-only and non-causal scope.
+
+        Do not attach real employees, customers, orders, addresses, voices, private video, or confidential process material.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety and scope
+      options:
+        - label: This proposal can be explained and tested with synthetic fixtures only.
+          required: true
+        - label: This proposal does not require employee monitoring, private-data processing, medical/ergonomic/safety scoring, or causal optimization claims.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the observable interface or engineering problem without assuming a solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Simpler alternatives considered
+      description: Include no-change, documentation, and manual-protocol alternatives when relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Validation and failure cases
+      description: Name the synthetic fixtures, negative tests, blockers, and accessibility paths needed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_claims
+    attributes:
+      label: Claims this feature must not make
+      description: For example accuracy, improvement, cause, privacy compliance, or production readiness.
+    validations:
+      required: true

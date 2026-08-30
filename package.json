@@ -1,0 +1,70 @@
+{
+  "name": "flow-lens",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Experimental local-only manual evidence review preview using deterministic synthetic packing fixtures.",
+  "license": "MIT",
+  "author": "Kairui Liu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jeffreyliu0131/flow-lens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jeffreyliu0131/flow-lens/issues"
+  },
+  "homepage": "https://github.com/Jeffreyliu0131/flow-lens#readme",
+  "keywords": [
+    "evidence-review",
+    "local-first",
+    "manual-annotation",
+    "process-observation",
+    "react",
+    "synthetic-fixtures"
+  ],
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "e2e:production": "npm run build && playwright test -c playwright.production.config.ts",
+    "check:no-egress": "node scripts/check-no-egress.mjs",
+    "licenses": "node scripts/license-inventory.mjs",
+    "perf": "node scripts/perf-check.mjs",
+    "check:public": "node scripts/public-release-check.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "2.1.10",
+    "@radix-ui/themes": "3.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.6",
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@vitejs/plugin-react": "6.1.1",
+    "eslint": "10.9.1",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.5",
+    "globals": "17.11.0",
+    "jsdom": "30.0.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.68.0",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
